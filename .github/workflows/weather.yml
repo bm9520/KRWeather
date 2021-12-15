@@ -19,11 +19,13 @@ jobs:
     - name: Install python package # 파이썬 관련 패키지를 설치하고
       run: |        
         pip install opencv-python
-        pip install GrabzIt        
         pip install numpy
         pip install --upgrade google-api-python-client
         pip install google-auth-oauthlib
-
+        pip install --upgrade Pillow
+        pip install selenium
+        pip install requests
+        
     - name: Install ubuntu package # 우분투 관련 패키지도 설치한 후
       run: |        
         sudo apt-get install fonts-unfonts-core
