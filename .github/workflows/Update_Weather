@@ -1,6 +1,6 @@
 on:
    schedule:
-     - cron: '55 * * * *' # UST 가 default. UST 22:55는 한국시간 07:55
+     - cron: '1 * * * *' # UST 가 default. UST 22:55는 한국시간 07:55
 
 jobs:
   build:
