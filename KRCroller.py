@@ -14,11 +14,11 @@ options.targetElement = "#weather"
 
 grabzIt.URLToImage("https://www.kma.go.kr/m/nation/forecast.jsp?ampm=1#none", options)
 # Then call the Save or SaveTo method
-grabzIt.SaveTo("./result.jpg")
+grabzIt.SaveTo("result.jpg")
 
 
 img_array = []
-for filename in glob.glob('./result.jpg'):
+for filename in glob.glob('result.jpg'):
     img = cv2.imread(filename)
     height, width, layers = img.shape
     size = (width,height)
