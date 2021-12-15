@@ -22,6 +22,7 @@ jobs:
         pip install GrabzIt        
         pip install numpy
         pip install --upgrade google-api-python-client
+        pip install google-auth-oauthlib
 
     - name: Install ubuntu package # 우분투 관련 패키지도 설치한 후
       run: |        
