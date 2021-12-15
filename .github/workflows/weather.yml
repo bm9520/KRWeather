@@ -16,9 +16,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Download chromedriver
-       run: |
+      run: |
           wget -q -O tmp.zip https://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip
-         unzip tmp.zip && rm tmp.zip
+          unzip tmp.zip && rm tmp.zip
 
     - name: Install python package # 파이썬 관련 패키지를 설치하고
       run: |        
