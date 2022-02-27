@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: result
-          path: ./kweather.png
+          path:  ${{ github.workspace }}/kweather.png
