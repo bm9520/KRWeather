@@ -1,5 +1,8 @@
 from time import sleep
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
 from PIL import Image
 from io import BytesIO
 import requests
@@ -23,7 +26,7 @@ try:
     driver.get('https://m.kma.go.kr/m/nation/forecast.jsp?ampm=1')
     driver.maximize_window()
 
-    kweather_map = driver.find_element_by_class_name('nation_map posi2')
+    kweather_map = driver.find_element(By.CLASS_NAME,"nation_map posi2")
 
     location = kweather_map.location
     size = kweather_map.size
