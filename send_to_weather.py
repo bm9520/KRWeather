@@ -19,7 +19,7 @@ try:
     options.add_argument("--no-sandbox")
 
     # chrome driver
-    driver = webdriver.Chrome('chromedriver', chrome_options=options)
+    driver = webdriver.Chrome('chromedriver', options=options)
     driver.implicitly_wait(3)
 
     # 기상청 접속
