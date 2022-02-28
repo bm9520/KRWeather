@@ -2,7 +2,6 @@ from time import sleep
 from selenium import webdriver
 from PIL import Image
 from io import BytesIO
-from twython import Twython
 import requests
 import json
 
@@ -21,10 +20,10 @@ try:
     driver.implicitly_wait(3)
 
     # 케이웨더 접속
-    driver.get('https://www.kweather.co.kr/weather.html')
+    driver.get('https://m.kma.go.kr/m/nation/forecast.jsp?ampm=1')
     driver.maximize_window()
 
-    kweather_map = driver.find_element_by_class_name('kweather_map')
+    kweather_map = driver.find_element_by_class_name('nation_map posi2')
 
     location = kweather_map.location
     size = kweather_map.size
@@ -41,11 +40,7 @@ try:
     area = (left, top, right, bottom)
     kweather = img.crop(area)
     kweather.save('kweather.png')
-    photo = open("./kweather.png", 'rb')
 
-    #############################################
-    # configure twitter API
-    ######################################
 
 
 except Exception as e:
