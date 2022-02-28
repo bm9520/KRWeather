@@ -19,7 +19,7 @@ try:
     driver = webdriver.Chrome('chromedriver', chrome_options=options)
     driver.implicitly_wait(3)
 
-    # 케이웨더 접속
+    # 기상청 접속
     driver.get('https://m.kma.go.kr/m/nation/forecast.jsp?ampm=1')
     driver.maximize_window()
 
@@ -36,7 +36,7 @@ try:
 
     png = driver.get_screenshot_as_png()
     img = Image.open(BytesIO(png))
-    # 오늘의 날씨 영역만 잘라냅니다.
+    # 날씨 영역만 잘라냅니다.
     area = (left, top, right, bottom)
     kweather = img.crop(area)
     kweather.save('kweather.png')
