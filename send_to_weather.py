@@ -39,7 +39,7 @@ try:
 
     png = driver.get_screenshot_as_png()
     img = Image.open(BytesIO(png))
-    # 날씨 영역만 잘라냅니다.
+    # 날씨 영역만 
     area = (left, top, right, bottom)
     kweather = img.crop(area)
     kweather.save('kweather.png')
