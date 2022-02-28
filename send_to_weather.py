@@ -47,7 +47,7 @@ try:
     area = (left, top, right, bottom)
     kweather = img.crop(area)
     kweather.save('kweather.png')
-
+    photo = open("./kweather.png", 'rb')
 
 
 except Exception as e:
