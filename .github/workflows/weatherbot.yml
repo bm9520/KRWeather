@@ -54,7 +54,5 @@ jobs:
         git add kweather.mp4
         git commit -m "convert weather mp4" 
         
-    - name: Push  
-      run: | 
-        git push -f origin publish
+
     
