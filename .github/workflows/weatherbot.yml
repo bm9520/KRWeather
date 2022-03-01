@@ -41,7 +41,7 @@ jobs:
 
     - name: Pull  
       run: | 
-         git config pull.rebase false
+         git pull origin main
          
          
     - name: Commits
