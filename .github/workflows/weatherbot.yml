@@ -54,10 +54,9 @@ jobs:
         git add kweather.mp4
         git commit -m "convert weather mp4" 
         
-    - name: コミット
-      uses: stefanzweifel/git-auto-commit-action@abd87b7d94702070bef78dc1d56b6928b8fa9ecc #v4.12.0
+    - name: Push  
+      uses: ad-m/github-push-action@master
       with:
-        repository: ./publish
-        branch: master
-        commit_message: Update
+        branch: 'publish'
+        github_token: $
     
