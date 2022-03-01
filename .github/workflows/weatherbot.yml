@@ -46,9 +46,7 @@ jobs:
       with:
         commit_message: Apply changes
   
-    - name: Pull  
-      run: | 
-         git pull origin main
+
   
       
     - name: Push  
