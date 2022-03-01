@@ -53,7 +53,13 @@ jobs:
         git config --local user.name "KWeather"   
         git add kweather.mp4
         git commit -m "convert weather mp4"
+
+    - name: Pull  
+      run: | 
+         git config pull.rebase false
+      
   
+      
     - name: Push  
       uses: ad-m/github-push-action@master
       with:
