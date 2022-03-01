@@ -47,7 +47,7 @@ jobs:
     
     - name: something
       run: |
-        git branch -u origin/master
+        git branch -u origin/main
         git push
         
     - name: Commits
