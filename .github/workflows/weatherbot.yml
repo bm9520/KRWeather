@@ -75,13 +75,7 @@ jobs:
         git config --local user.name "bm9520"   
         git add kweather.png
         git commit -m "Screenshot weather update" 
-        
-    - name: Push  
-      uses: ad-m/github-push-action@master
-      with:
-        branch: 'main'
-        github_token: $
- 
+         
     - name: Commits
       run: | 
         git config --local user.email "bm9520@gmail.com"
