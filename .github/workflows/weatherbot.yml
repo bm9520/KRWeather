@@ -35,9 +35,9 @@ jobs:
         wget https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.zip
         unzip ./chromedriver_linux64.zip   
     
-    - name: Pull
-      run: |
-        git pull
+   # - name: Pull
+     # run: |
+     #   git pull
         
    
     
@@ -69,26 +69,32 @@ jobs:
         git clean -f     
         git status
         
-        
-    - name: Commits
-      run: | 
-        git config --local user.email "bm9520@gmail.com"
-        git config --local user.name "bm9520"   
-        git add kweather.png
-        git commit -m "Screenshot weather update" 
-         
-    - name: Commits
-      run: | 
-        git config --local user.email "bm9520@gmail.com"
-        git config --local user.name "bm9520"   
-        git add kweather.mp4
-        git commit -m "Screenshot weather update" 
-        
-    - name: Push  
-      uses: ad-m/github-push-action@master
+
+    - name: Commit & Push changes
+      uses: actions-js/push@master
       with:
-        branch: 'main'
-        github_token: $
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+        
+   # - name: Commits
+   #   run: | 
+   #     git config --local user.email "bm9520@gmail.com"
+   #     git config --local user.name "bm9520"   
+   #     git add kweather.png
+   #     git commit -m "Screenshot weather update" 
+         
+  #  - name: Commits
+  #    run: | 
+  #      git config --local user.email "bm9520@gmail.com"
+  #      git config --local user.name "bm9520"   
+  #      git add kweather.mp4
+  #      git commit -m "Screenshot weather update" 
+        
+  #  - name: Push  
+  #    uses: ad-m/github-push-action@master
+  #    with:
+  #      branch: 'main'
+  #      github_token: $
  
   
 
