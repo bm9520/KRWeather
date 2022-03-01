@@ -54,10 +54,6 @@ jobs:
         git add kweather.mp4
         git commit -m "convert weather mp4" 
         
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-         ref: Publish
          
     - name: Push  
       uses: ad-m/github-push-action@master
