@@ -42,8 +42,7 @@ jobs:
   
     - name: delete untracked, git initialize
       run: |
-        git clean -f      
-        git rm-rf .git/
+        git clean -f     
         git init
         git remote add origin https://repository.remote.url
         
