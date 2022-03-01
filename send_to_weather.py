@@ -10,6 +10,8 @@ from io import BytesIO
 import requests
 import json
 import os
+import glob
+import cv2
 
 try:
 
@@ -50,7 +52,22 @@ try:
     kweather = img.crop(area)
     kweather.save('./kweather.png')
     photo = open("./kweather.png", 'rb')
+    
+    #mp4 convert
+    img_array = []
+        for filename in glob.glob('./kweather.png'):
+            img = cv2.imread(filename)
+            height, width, layers = img.shape
+            size = (width,height)
+            img_array.append(img)
 
+
+        out = cv2.VideoWriter('./kweather.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 60, size)
+
+        for i in range(len(img_array)):
+            out.write(img_array[i])
+        out.release()    
+        
 
 except Exception as e:
     print(e)    
