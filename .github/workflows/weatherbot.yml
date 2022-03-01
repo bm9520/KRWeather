@@ -52,10 +52,7 @@ jobs:
      # with:
       #  path: ./kweather.mp4
     
-    - name: 파일복사
-      run: | 
-        cp publish/kweather.png main/kweather.png
-        cp publish/kweather.mp4 main/kweather.mp4
+   
              
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
       run: | 
@@ -90,7 +87,7 @@ jobs:
     - name: Push  
       uses: ad-m/github-push-action@master
       with:
-        branch: 'main'
+        branch: 'publish'
         github_token: $
  
   
