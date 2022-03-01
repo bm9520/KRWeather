@@ -42,12 +42,12 @@ jobs:
     - name: Remove File
       uses: JesseTG/rm@v1.0.2
       with:
-        path: kweather.png
+        path: ./kweather.png
         
     - name: Remove File
       uses: JesseTG/rm@v1.0.2
       with:
-        path: kweather.mp4
+        path: ./kweather.mp4
         
              
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
@@ -65,7 +65,7 @@ jobs:
       run: | 
         git config --local user.email "bm9520@gmail.com"
         git config --local user.name "bm9520"   
-        git add ./kweather.png
+        git add kweather.png
         git commit -m "Screenshot weather update" 
         
     - name: Push  
@@ -78,7 +78,7 @@ jobs:
       run: | 
         git config --local user.email "bm9520@gmail.com"
         git config --local user.name "bm9520"   
-        git add ./kweather.mp4
+        git add kweather.mp4
         git commit -m "Screenshot weather update" 
         
     - name: Push  
