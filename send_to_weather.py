@@ -63,7 +63,7 @@ try:
         
     out =  cv2.VideoWriter('./kweather.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 60, size)
     
-    for i in rage(len(img_array)):
+    for i in range(len(img_array)):
         out.write(img_array[i])
     out.release()
     
