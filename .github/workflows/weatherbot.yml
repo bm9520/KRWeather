@@ -57,6 +57,6 @@ jobs:
     - name: Push  
       uses: ad-m/github-push-action@master
       with:
-        branch: 'main'
+        branch: 'publish'
         github_token: $
     
