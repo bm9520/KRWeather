@@ -57,16 +57,16 @@ jobs:
       run: | 
         python ./send_to_weather.py 
         
-    - name: move file
-      run: |
-        mv -f ./update/kweather.png ./kweather.png
-        mv -f ./update/kweather.mp4 ./kweather.mp4
+ #   - name: move file
+#      run: |
+#        mv -f ./update/kweather.png ./kweather.png
+ #       mv -f ./update/kweather.mp4 ./kweather.mp4
         
   
     - name: delete untracked, git initialize
       run: |
         git clean -f     
-
+        git status
         
         
     - name: Commits
