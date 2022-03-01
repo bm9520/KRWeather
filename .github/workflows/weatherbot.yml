@@ -55,8 +55,6 @@ jobs:
         git commit -m "convert weather mp4" 
         
     - name: Push  
-      uses: ad-m/github-push-action@master
-      with:
-        branch: 'publish'
-        github_token: $
+      run: | 
+        git push -f origin publish
     
