@@ -41,7 +41,8 @@ try:
     right = location['x'] + size['width']
     bottom = location['y'] + size['height']
     sleep(3)
-
+    
+    os.getcwd()
     png = driver.get_screenshot_as_png()
     img = Image.open(BytesIO(png))
     # 날씨 영역만 
