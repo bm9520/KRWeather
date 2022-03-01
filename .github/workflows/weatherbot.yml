@@ -39,11 +39,7 @@ jobs:
       run: |
         git pull
         
-    - name: move file
-      run: |
-        mv -f ./update/kweather.png ./kweather.png
-        mv -f ./update/kweather.mp4 ./kweather.mp4
-        
+   
     
         
    # - name: Remove File
@@ -60,7 +56,12 @@ jobs:
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
       run: | 
         python ./send_to_weather.py 
-
+        
+    - name: move file
+      run: |
+        mv -f ./update/kweather.png ./kweather.png
+        mv -f ./update/kweather.mp4 ./kweather.mp4
+        
   
     - name: delete untracked, git initialize
       run: |
