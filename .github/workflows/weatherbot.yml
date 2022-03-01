@@ -68,7 +68,7 @@ jobs:
       run: |
         git clean -f     
         git status
-        
+        git branch -u origin/main
 
     #- name: Commit & Push changes
      # uses: actions-js/push@master
