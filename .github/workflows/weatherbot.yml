@@ -43,12 +43,12 @@ jobs:
     - name: delete untracked, git initialize
       run: |
         git clean -f     
-        git init
     
     
-    - name: Pull
+    - name: something
       run: |
-        git pull origin main
+        git branch -u origin/master
+        git push
         
     - name: Commits
       run: | 
