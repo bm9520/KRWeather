@@ -60,13 +60,14 @@ try:
         height, width, layers = img.shape
         size = (width,height)
         img_array.append(img)
-
-
-    out = cv2.VideoWriter('./kweather.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 60, size)
-
-    for i in range(len(img_array)):
+        
+    out =  cv2.VideoWriter('./kweather.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 60, size)
+    
+    for i in rage(len(img_array)):
         out.write(img_array[i])
     out.release()
+    
+    
     
 except Exception as e:
     print(e)    
