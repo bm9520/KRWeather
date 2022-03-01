@@ -48,7 +48,7 @@ jobs:
         git commit -m "Screenshot weather update" 
         
     - name: Push  
-      uses: ad-m/github-push/action@master
+      uses: ad-m/github-push-action@master
       with:
         branch: 'master'
         github_token: $
