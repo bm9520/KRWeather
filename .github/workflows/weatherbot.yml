@@ -25,7 +25,7 @@ jobs:
         pip install selenium
         pip install requests
         pip install pillow
-
+        pip install opencv-python
     - name: Install ubuntu package # 우분투 관련 패키지도 설치한 후
       run: |        
         sudo apt-get install fonts-unfonts-core
