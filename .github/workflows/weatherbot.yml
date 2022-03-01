@@ -39,7 +39,11 @@ jobs:
       run: | 
         python ./send_to_weather.py 
 
-  
+    - name: Pull  
+      run: | 
+         git config pull.rebase false
+         
+         
     - name: Commits
       run: | 
         git config --local user.email "bm9520@gmail.com"
@@ -54,9 +58,7 @@ jobs:
         git add kweather.mp4
         git commit -m "convert weather mp4"
 
-    - name: Pull  
-      run: | 
-         git config pull.rebase false
+  
       
   
       
