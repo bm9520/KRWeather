@@ -70,31 +70,31 @@ jobs:
         git status
         
 
-    - name: Commit & Push changes
-      uses: actions-js/push@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Commit & Push changes
+     # uses: actions-js/push@master
+     # with:
+     #   github_token: ${{ secrets.GITHUB_TOKEN }}
         
         
-   # - name: Commits
-   #   run: | 
-   #     git config --local user.email "bm9520@gmail.com"
-   #     git config --local user.name "bm9520"   
-   #     git add kweather.png
-   #     git commit -m "Screenshot weather update" 
+    - name: Commits
+      run: | 
+        git config --local user.email "bm9520@gmail.com"
+        git config --local user.name "bm9520"   
+        git add --force kweather.png
+        git commit -m "Screenshot weather update" 
          
-  #  - name: Commits
-  #    run: | 
-  #      git config --local user.email "bm9520@gmail.com"
-  #      git config --local user.name "bm9520"   
-  #      git add kweather.mp4
-  #      git commit -m "Screenshot weather update" 
+    - name: Commits
+      run: | 
+        git config --local user.email "bm9520@gmail.com"
+        git config --local user.name "bm9520"   
+        git add --force kweather.mp4
+        git commit -m "Screenshot weather update" 
         
-  #  - name: Push  
-  #    uses: ad-m/github-push-action@master
-  #    with:
-  #      branch: 'main'
-  #      github_token: $
+    - name: Push  
+      uses: ad-m/github-push-action@master
+      with:
+        branch: 'main'
+        github_token: $
  
   
 
