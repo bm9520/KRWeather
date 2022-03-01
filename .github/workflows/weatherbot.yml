@@ -40,7 +40,9 @@ jobs:
         python ./send_to_weather.py 
 
   
-         
+    - name: delete untracked
+      run: |
+        git clean -f      
          
     - name: Commits
       run: | 
