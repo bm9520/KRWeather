@@ -44,7 +44,6 @@ jobs:
       run: |
         git clean -f     
         git init
-        git remote add origin https://repository.remote.url
         
     - name: Commits
       run: | 
