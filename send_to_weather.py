@@ -29,9 +29,9 @@ try:
     driver.get('https://m.kma.go.kr/m/nation/forecast.jsp?ampm=1')
     driver.maximize_window()
     
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, 'nation_map posi2')))
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'weather')))
 
-    kweather_map = driver.find_element(By.CLASS_NAME,"nation_map posi2")
+    kweather_map = driver.find_element(By.ID,"weather")
 
     location = kweather_map.location
     size = kweather_map.size
