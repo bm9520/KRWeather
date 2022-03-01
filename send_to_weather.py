@@ -44,26 +44,26 @@ try:
     bottom = location['y'] + size['height']
     sleep(3)
     
-    path = './update'
-    os.mkdir(path)
+  #  path = './update'
+  #  os.mkdir(path)
     
     png = driver.get_screenshot_as_png()
     img = Image.open(BytesIO(png))
     # 날씨 영역만 
     area = (left, top, right, bottom)
     kweather = img.crop(area)
-    kweather.save('./update/kweather.png')
-    photo = open("./update/kweather.png", 'rb')
+    kweather.save('./kweather.png')
+    photo = open("./kweather.png", 'rb')
     
     #mp4 convert
     img_array = []
-    for filename in glob.glob('./update/kweather.png'):
+    for filename in glob.glob('./kweather.png'):
         img = cv2.imread(filename)
         height, width, layers = img.shape
         size = (width,height)
         img_array.append(img)
         
-    out =  cv2.VideoWriter('./update/kweather.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 60, size)
+    out =  cv2.VideoWriter('./kweather.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 60, size)
     
     for i in range(len(img_array)):
         out.write(img_array[i])
