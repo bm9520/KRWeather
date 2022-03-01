@@ -56,7 +56,7 @@ jobs:
         
     - name: Pull
       run: |
-         git pull origin Publish --allow-unrelated-histories
+         git pull origin publish --allow-unrelated-histories
  
        
     - name: Push  
