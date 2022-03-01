@@ -44,6 +44,11 @@ jobs:
       run: |
         git clean -f     
         git init
+    
+    
+    - name: Pull
+      run: |
+        git pull origin main
         
     - name: Commits
       run: | 
