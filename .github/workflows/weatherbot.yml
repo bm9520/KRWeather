@@ -51,7 +51,11 @@ jobs:
     #  uses: JesseTG/rm@v1.0.2
      # with:
       #  path: ./kweather.mp4
-        
+    
+    - name: 파일복사
+      run: | 
+        cp publish/kweather.png main/kweather.png
+        cp publish/kweather.mp4 main/kweather.mp4
              
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
       run: | 
