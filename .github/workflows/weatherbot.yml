@@ -46,23 +46,16 @@ jobs:
         git config --local user.name "KWeather"   
         git add kweather.png
         git commit -m "Screenshot weather update" 
-        
+        git push
     - name: Commits
       run: | 
         git config --local user.email "bm9520@gmail.com"
         git config --local user.name "KWeather"   
         git add kweather.mp4
-        git commit -m "convert weather mp4" 
+        git commit -m "convert weather mp4"
+        git push
         
-    - name: Pull
-      run: |
-         git pull origin publish --allow-unrelated-histories
+
  
        
-    - name: Push  
-      uses: ad-m/github-push-action@master
-      with:
-        branch: 'publish'
-        github_token: $
-
     
