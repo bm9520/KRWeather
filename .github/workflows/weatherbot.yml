@@ -56,5 +56,5 @@ jobs:
         
     - name: Push  
       run: | 
-        git push origin publish
+        git push -u origin publish
     
