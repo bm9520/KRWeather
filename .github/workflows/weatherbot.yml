@@ -51,7 +51,10 @@ jobs:
     #  uses: JesseTG/rm@v1.0.2
      # with:
       #  path: ./kweather.mp4
-    
+    - name: rm file # send_to_weather.py 파일을 실행하시오! 
+      run: | 
+        git rm kweather1.png
+        git rm kweather1.mp4    
    
              
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
@@ -62,10 +65,7 @@ jobs:
 #      run: |
 #        mv -f ./update/kweather.png ./kweather.png
  #       mv -f ./update/kweather.mp4 ./kweather.mp4
-    - name: mv name # send_to_weather.py 파일을 실행하시오! 
-      run: | 
-        git mv kweather.png kweather1.png
-        git mv kweather.mp4 kweather1.mp4
+    
         
   
     - name: delete untracked, git initialize
@@ -84,14 +84,14 @@ jobs:
       run: | 
         git config --local user.email "bm9520@gmail.com"
         git config --local user.name "bm9520"   
-        git add --force kweather1.png
+        git add --force kweather.png
         git commit -m "Screenshot weather update" 
          
     - name: Commits
       run: | 
         git config --local user.email "bm9520@gmail.com"
         git config --local user.name "bm9520"   
-        git add --force kweather1.mp4
+        git add --force kweather.mp4
         git commit -m "Screenshot weather update" 
         
     - name: Push  
