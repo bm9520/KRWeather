@@ -63,8 +63,9 @@ jobs:
         
     - name: remove file
       run: |
-        git rm --cached chromedriver
+        
         git rm --cached chromedriver_linux64.zip
+        git rm --cached chromedriver
        
     
         
