@@ -55,22 +55,23 @@ jobs:
       run: | 
         git rm kweather1.png
         git rm kweather1.mp4    
-   
+        
              
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
       run: | 
         python ./send_to_weather.py 
         
- #   - name: move file
-#      run: |
-#        mv -f ./update/kweather.png ./kweather.png
- #       mv -f ./update/kweather.mp4 ./kweather.mp4
+    - name: remove file
+      run: |
+        git rm chromedriver
+        git rm chromedriver_linux64.zip
+       
     
         
-  
+       #   git clean -f   
     - name: delete untracked, git initialize
       run: |
-        git clean -f     
+  
         git status
         git branch -u origin/main
 
