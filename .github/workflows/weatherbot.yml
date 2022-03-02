@@ -63,8 +63,9 @@ jobs:
         
     - name: remove file
       run: |
-        git update-index --assume-unchanged chromedriver
-        git update-index --assume-unchanged chromedriver_linux64.zip
+        
+        git update-index --assume-unchanged ./chromedriver_linux64.zip
+        git update-index --assume-unchanged ./chromedriver
 
 
        
