@@ -19,7 +19,7 @@ try:
     options.add_argument("start-maximized")
     options.add_argument("lang=ko_KR")
     options.add_argument('headless')
-    options.add_argument('window-size=1920x1080')
+    options.add_argument('window-size=410x700')
     options.add_argument("disable-gpu")
     options.add_argument("--no-sandbox")
 
@@ -33,7 +33,7 @@ try:
     
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'weather')))
 
-    kweather_map = driver.find_element(By.ID,"weather")
+    kweather_map = driver.find_element(By.ID,"content_weather")
 
     location = kweather_map.location
     size = kweather_map.size
