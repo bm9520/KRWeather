@@ -8,10 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04 # 우분투 18.04 에서
+    runs-on: ubuntu-20.04 # 우분투 20.04 에서
     strategy:
       matrix:
-        python-version: [3.7] # 파이썬 3.7 버전으로
+        python-version: [3.9] # 파이썬 3.9 버전으로
 
     steps:
     - uses: actions/checkout@v2
@@ -35,10 +35,10 @@ jobs:
         sudo apt-get install google-chrome-stable    
         wget https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.zip
         unzip ./chromedriver_linux64.zip   
-        sudo apt-get install libgl1-mesa-glx
-        sudo apt-get install libglib2.0-0
-        apt-get install ffmpeg x264 libx264-dev
-        apt-get install watch
+      #  sudo apt-get install libgl1-mesa-glx
+      #  sudo apt-get install libglib2.0-0
+      #  apt-get install ffmpeg x264 libx264-dev
+      #  apt-get install watch
         
 
         
