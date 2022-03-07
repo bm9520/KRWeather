@@ -62,7 +62,7 @@ jobs:
       run: | 
         git rm kweather.png
         git rm kweather.mp4
-        git rm ./ffmpeg/kweather.mp4
+        git rm kweather1.mp4
         
              
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
@@ -79,7 +79,7 @@ jobs:
     - name: ffmpeg
       uses: FedericoCarboni/setup-ffmpeg@v1
       id: setup-ffmpeg
-    - run: ffmpeg -i ./kweather.mp4 -vcodec h264 ./ffmpeg/kweather.mp4 -y
+    - run: ffmpeg -i kweather.mp4 -vcodec h264 kweather1.mp4 -y
     
         
        #   git clean -f   
