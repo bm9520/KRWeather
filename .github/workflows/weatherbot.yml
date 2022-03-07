@@ -62,7 +62,7 @@ jobs:
       run: | 
         git rm kweather.png
         git rm kweather.mp4
-        git rm kweather.webm
+        git rm kweather1.mp4
         
              
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
@@ -79,7 +79,7 @@ jobs:
     - name: ffmpeg
       uses: FedericoCarboni/setup-ffmpeg@v1
       id: setup-ffmpeg
-    - run: ffmpeg -i kweather.mp4 -c:v VP80 -crf 18 -preset veryfast kweather.webm -y
+    - run: ffmpeg -i kweather.mp4 -c:v libx264 -crf 18 -preset veryfast kweather1.mp4
     
         
        #   git clean -f   
@@ -113,8 +113,8 @@ jobs:
       run: | 
         git config --local user.email "bm9520@gmail.com"
         git config --local user.name "bm9520"   
-        git add --force kweather.webm
-        git commit -m "webm ffmpeg" 
+        git add --force kweather1.mp4
+        git commit -m "h264 ffmpeg" 
         
     - name: Push  
       uses: ad-m/github-push-action@master
