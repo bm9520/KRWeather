@@ -107,7 +107,14 @@ jobs:
         git config --local user.email "bm9520@gmail.com"
         git config --local user.name "bm9520"   
         git add --force kweather.mp4
-        git commit -m "Screenshot weather update" 
+        git commit -m "mp4v weather update" 
+        
+    - name: Commits
+      run: | 
+        git config --local user.email "bm9520@gmail.com"
+        git config --local user.name "bm9520"   
+        git add --force kweather1.mp4
+        git commit -m "H264 ffmpeg" 
         
     - name: Push  
       uses: ad-m/github-push-action@master
