@@ -79,7 +79,7 @@ jobs:
     - name: ffmpeg
       uses: FedericoCarboni/setup-ffmpeg@v1
       id: setup-ffmpeg
-    - run: ffmpeg -i kweather.mp4 -vcodec h264 kweather1.mp4 -y
+    - run: ffmpeg -i kweather.mp4 -c:v libx264 kweather1.mp4 -y
     
         
        #   git clean -f   
