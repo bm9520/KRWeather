@@ -75,7 +75,10 @@ jobs:
   #      git update-index --assume-unchanged ./chromedriver
 
 
-       
+    - name: ffmpeg
+      uses: FedericoCarboni/setup-ffmpeg@v1
+      id: setup-ffmpeg
+    - run: ffmpeg -i ./kweather.mp4 ./kweather.mp4
     
         
        #   git clean -f   
