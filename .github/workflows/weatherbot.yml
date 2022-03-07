@@ -79,7 +79,7 @@ jobs:
     - name: ffmpeg
       uses: FedericoCarboni/setup-ffmpeg@v1
       id: setup-ffmpeg
-    - run: ffmpeg -i kweather.mp4 -c:v libx264 -crf 18 -preset veryfast kweather1.mp4
+    - run: ffmpeg -i kweather.mp4 -c:v libx264 -crf 18 -b:v 2M -preset veryfast kweather1.mp4
     
         
        #   git clean -f   
