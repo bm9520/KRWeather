@@ -28,7 +28,8 @@ try:
     driver.implicitly_wait(3)
 
     # 기상청 접속
-    driver.get('https://m.kma.go.kr/m/nation/forecast.jsp?ampm=1')
+    #driver.get('https://m.kma.go.kr/m/nation/forecast.jsp?ampm=1')
+    driver.get('https://www.weather.go.kr/w/index.do')
     driver.maximize_window()
     
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'weather')))
