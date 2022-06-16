@@ -29,12 +29,15 @@ try:
 
     # 기상청 접속
     #driver.get('https://m.kma.go.kr/m/nation/forecast.jsp?ampm=1')
-    driver.get('https://www.weather.go.kr/w/index.do')
+    #driver.get('https://www.weather.go.kr/w/index.do')
+    driver.get('https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qvt=0&query=%EC%A0%84%EA%B5%AD%EB%82%B4%EC%9D%BC%EC%98%A4%ED%9B%84%EB%82%A0%EC%94%A8')
     driver.maximize_window()
     
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'weather')))
+    #WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, 'weather')))
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="weatherWrap"]/div[1]/div[2]/div[1]/div[1]')))
 
-    kweather_map = driver.find_element(By.ID,"content_weather")
+    #kweather_map = driver.find_element(By.ID,"content_weather")
+    kweather_map = driver.find_element(By.XPATH, '//*[@id="weatherWrap"]/div[1]/div[2]/div[1]/div[1]')
 
     location = kweather_map.location
     size = kweather_map.size
