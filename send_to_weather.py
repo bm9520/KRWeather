@@ -43,9 +43,9 @@ try:
     size = kweather_map.size
 
     left = location['x']
-    top = location['y']
+    top = location['y']-45
     right = location['x'] + size['width']
-    bottom = location['y'] + size['height']
+    bottom = location['y'] + size['height']+30
     sleep(3)
     
  #   path = './update'
