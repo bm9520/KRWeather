@@ -14,7 +14,7 @@ import glob
 import cv2
 
 try:
-
+    service = Service(executable_path=r'chromedriver')
     options = webdriver.ChromeOptions()
     options.add_argument("start-maximized")
     options.add_argument("lang=ko_KR")
@@ -24,7 +24,7 @@ try:
     options.add_argument("--no-sandbox")
 
     # chrome driver
-    driver = webdriver.Chrome('chromedriver', options=options)
+    driver = webdriver.Chrome('chromedriver', service=service, options=options)
     driver.implicitly_wait(3)
 
     # 기상청 접속
